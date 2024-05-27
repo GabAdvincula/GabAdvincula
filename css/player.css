@@ -1,0 +1,387 @@
+body {
+    box-sizing: border-box;
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+.agent::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: 3;
+}
+
+.agent {
+    position: relative;
+    z-index: 2;
+    color: white;
+    animation: fadeIn 1s ease-in-out 0.5s both;
+}
+
+.main-width {
+    width: 1400px;
+    max-width: 95%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+
+.agent header .logo h2 a {
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: color 0.4s;
+    animation: slideInFromLeft 1s ease-in-out 0.5s both;
+}
+
+.agent header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 30px;
+}
+
+nav ul.menu {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    animation: fadeIn 1s ease-in-out 1s both; 
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: .4s;
+}
+
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a:focus {
+    border-bottom: 4px solid white;
+}
+
+nav ul li.dl a {
+    background: transparent;
+    color: white;
+    border: 2px solid #ffffff;
+    padding: 7px 20px;
+    border-radius: 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 800;
+    margin-left: 150px;
+}
+
+nav ul li.dl:hover a {
+    border: 1px solid white;
+    color: black;
+    background: white;
+    transition: .4s;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.directional {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+
+.directional button {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    opacity: 0.2;
+}
+
+.directional button:hover {
+    opacity: 1;
+}
+
+#slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: fadeIn 1s ease-in-out 1.5s both;
+    
+}
+
+#slide .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#slide .item .image {
+    position: absolute;
+    top: -250px;
+    left: 450px;
+    width: 50%;
+    height: 75%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    opacity: 0;
+    transform: scale(3);
+    transition: 1.5s;
+}
+
+#slide .item .image img {
+    width: 65%;
+    transition: 0.5s;
+}
+
+#slide .item .image::before {
+    position: absolute;
+    bottom: -30px;
+    height: 60px;
+    width: 60%;
+    background-color: #000;
+    content: '';
+    z-index: 1;
+    border-radius: 50%;
+    filter: blur(30px);
+}
+
+#slide .item .image img:hover {
+    transform: scale(1.1);
+}
+
+.content .left {
+    position: absolute;
+    left:100px;
+    top: 15%;
+    display: none;
+    padding: 20px;
+    background-color: rgba(27, 4, 4, 0.3);
+    border: 2px solid #380957;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    width: 400px; /* Adjust this value as needed */
+}
+
+.content .left h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content .left .des {
+    font-size: 16px;
+    opacity: 0.8;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.content .left button {
+    font-size: small;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.content .left button i:nth-child(1) {
+    margin-left: 10px;
+}
+
+.content .right {
+    position: absolute;
+    right: 120px;
+    top: 15%;
+    display: none;
+    padding: 20px;
+    background-color: rgba(27, 4, 4, 0.3);
+    border: 2px solid #380957;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    width: 400px; /* Adjust this value as needed */
+}
+
+.content .right h2 {
+     font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.content .right ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.content .right li {
+    font-size: small;
+    position: relative;
+    margin-top: 20px;
+}
+
+.content .right li::before {
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #8C0781;
+    content: '';
+    border-radius: 50%;
+    box-shadow: 0 0 10px #8C0781;
+    
+}
+
+
+.content .right li p:nth-child(1) {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.content .right li p:nth-child(2) {
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    font-size: x-small;
+}
+
+#slide .item:nth-child(1) .image {
+    opacity: 0;
+    transform: scale(0) translate(-100px);
+}
+
+#slide .item:nth-child(2) .image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#slide .item:nth-child(2) {
+    z-index: 3;
+}
+
+
+@keyframes contentOut {
+    from {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate(0, -100%);
+        filter: blur(113px);
+    }
+}
+
+@keyframes contentIn {
+    from {
+        opacity: 0;
+        transform: translate(0, 100%);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+
+}
+
+
+#slide .item:nth-child(1) .left,
+#slide .item:nth-child(1) .right,
+#slide .item:nth-child(2) .left,
+#slide .item:nth-child(2) .right {
+    display: block;
+}
+
+#slide .item:nth-child(1) .left,
+#slide .item:nth-child(1) .right {
+    animation: contentOut 1s ease-in-out 1 forwards;
+}
+
+#slide .item:nth-child(2) .left,
+#slide .item:nth-child(2) .right {
+    animation: contentIn 1s ease-in-out 1 forwards;
+}
+
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
