@@ -288,3 +288,61 @@ a.cta {
     transform: translateX(0);
   }
 }
+
+
+@media (max-width: 1200px) {
+  .title .main-text h1 {
+      font-size: 3rem;
+  }
+  .title .main-text h3 {
+      font-size: 1.125rem;
+  }
+  .title .main-text h6 {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .title .main-text h1 {
+      font-size: 2.5rem;
+  }
+  .title .main-text h3 {
+      font-size: 1rem;
+  }
+  .title .main-text h6 {
+      font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li a {
+      margin-left: 1rem;
+  }
+  nav ul li.dl a {
+      margin-left: 1rem;
+  }
+  .title .main-text h1 {
+      font-size: 2rem;
+  }
+  .title .main-text h3 {
+      font-size: 0.875rem;
+  }
+  .title .main-text h6 {
+      font-size: 0.75rem;
+  }
+  .title .main-text p {
+      width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .title .main-text h1 {
+      font-size: 1.5rem;
+  }
+  .title .main-text h3 {
+      font-size: 0.75rem;
+  }
+  .title .main-text h6 {
+      font-size: 0.625rem;
+  }
+}
