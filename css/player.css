@@ -40,9 +40,10 @@ body {
 }
 
 .main-width {
-    width: 1400px;
-    max-width: 95%;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 0 20px;
     position: relative;
     z-index: 100;
 }
@@ -336,87 +337,106 @@ nav ul li.dl:hover a {
 
 #slide .item:nth-child(1) .left,
 #slide .item:nth-child(1) .right {
-    animation: contentOut 1s ease-in-out 1 forwards;
+    animation: contentOut 1s ease-in-out both;
 }
 
 #slide .item:nth-child(2) .left,
 #slide .item:nth-child(2) .right {
-    animation: contentIn 1s ease-in-out 1 forwards;
+    animation: contentIn 1s ease-in-out both;
 }
 
 @keyframes fadeIn {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
     }
-    to {
+    100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
 @keyframes slideInFromLeft {
-    from {
-        opacity: 0;
+    0% {
         transform: translateX(-100%);
+        opacity: 0;
     }
-    to {
-        opacity: 1;
+    100% {
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .main-width {
-        width: 90%;
-        margin: 0 auto;
+    .agent header .logo h2 a {
+        font-size: 24px;
     }
-    nav ul.menu {
-        display: block;
-        text-align: center;
-        padding: 0;
-    }
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+
     nav ul li a {
-        margin-left: 0;
-        font-size: 16px;
+        margin-left: 30px;
+        font-size: 14px;
     }
+
     nav ul li.dl a {
-        margin-left: 0;
-        display: block;
-        margin: 20px auto;
+        margin-left: 30px;
+        padding: 5px 15px;
     }
+
     .content .left, .content .right {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        padding: 10px;
-        top: 20%; /* Adjusting to better fit on smaller screens */
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        top: 10%;
     }
-    #slide .item .image {
-        left: 50%;
-        transform: translate(-50%, -50%) scale(1);
+
+    .content .left h1, .content .right h2 {
+        font-size: 24px;
+    }
+
+    .content .left .des, .content .right li p:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .directional button {
+        width: 40px;
+        height: 40px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .agent header {
+        padding: 20px 0;
+    }
+
+    .agent header .logo h2 a {
+        font-size: 20px;
+    }
+
     nav ul li a {
-        font-size: 14px;
+        margin-left: 20px;
+        font-size: 12px;
     }
-    .content .left h1 {
-        font-size: 24px;
+
+    nav ul li.dl a {
+        margin-left: 20px;
+        padding: 3px 10px;
     }
-    .content .right h2 {
-        font-size: 16px;
-    }
-    .content .right li p:nth-child(2) {
-        font-size: small;
-    }
+
     .content .left, .content .right {
-        top: 30%; /* Further adjusting to better fit on smaller screens */
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        top: 5%;
+    }
+
+    .content .left h1, .content .right h2 {
+        font-size: 18px;
+    }
+
+    .content .left .des, .content .right li p:nth-child(1) {
+        font-size: 12px;
+    }
+
+    .directional button {
+        width: 30px;
+        height: 30px;
     }
 }
