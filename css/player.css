@@ -147,7 +147,6 @@ nav ul li.dl:hover a {
     height: 100%;
     z-index: 1;
     animation: fadeIn 1s ease-in-out 1.5s both;
-    
 }
 
 #slide .item {
@@ -197,7 +196,7 @@ nav ul li.dl:hover a {
 
 .content .left {
     position: absolute;
-    left:100px;
+    left: 100px;
     top: 15%;
     display: none;
     padding: 20px;
@@ -247,7 +246,7 @@ nav ul li.dl:hover a {
 }
 
 .content .right h2 {
-     font-size: 18px;
+    font-size: 18px;
     font-weight: 600;
     color: white;
 }
@@ -275,9 +274,7 @@ nav ul li.dl:hover a {
     content: '';
     border-radius: 50%;
     box-shadow: 0 0 10px #8C0781;
-    
 }
-
 
 .content .right li p:nth-child(1) {
     font-weight: 500;
@@ -306,7 +303,6 @@ nav ul li.dl:hover a {
     z-index: 3;
 }
 
-
 @keyframes contentOut {
     from {
         opacity: 1;
@@ -329,10 +325,7 @@ nav ul li.dl:hover a {
         opacity: 1;
         transform: translate(0, 0);
     }
-
-
 }
-
 
 #slide .item:nth-child(1) .left,
 #slide .item:nth-child(1) .right,
@@ -351,8 +344,7 @@ nav ul li.dl:hover a {
     animation: contentIn 1s ease-in-out 1 forwards;
 }
 
-
-  @keyframes fadeIn {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -366,7 +358,7 @@ nav ul li.dl:hover a {
 @keyframes slideInFromLeft {
     from {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-100%);
     }
     to {
         opacity: 1;
@@ -374,70 +366,49 @@ nav ul li.dl:hover a {
     }
 }
 
-@keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(100px);
+@media screen and (max-width: 768px) {
+    .main-width {
+        width: 90%;
+        margin: 0 auto;
     }
-    to {
-        opacity: 1;
-        transform: translateX(0);
+    nav ul.menu {
+        display: block;
+        text-align: center;
+        padding: 0;
     }
-}
-
-@media (max-width: 1200px) {
-    .title .main-text h1 {
-        font-size: 3rem;
+    nav ul li {
+        display: block;
+        margin: 10px 0;
     }
-    .title .main-text h3 {
-        font-size: 1.125rem;
-    }
-    .title .main-text h6 {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .title .main-text h1 {
-        font-size: 2.5rem;
-    }
-    .title .main-text h3 {
-        font-size: 1rem;
-    }
-    .title .main-text h6 {
-        font-size: 0.875rem;
-    }
-}
-
-@media (max-width: 768px) {
     nav ul li a {
-        margin-left: 1rem;
+        margin-left: 0;
+        font-size: 16px;
     }
     nav ul li.dl a {
-        margin-left: 1rem;
+        margin-left: 0;
+        display: block;
+        margin: 20px auto;
     }
-    .title .main-text h1 {
-        font-size: 2rem;
-    }
-    .title .main-text h3 {
-        font-size: 0.875rem;
-    }
-    .title .main-text h6 {
-        font-size: 0.75rem;
-    }
-    .title .main-text p {
-        width: 100%;
+    .content .left, .content .right {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 10px;
     }
 }
 
-@media (max-width: 576px) {
-    .title .main-text h1 {
-        font-size: 1.5rem;
+@media screen and (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px;
     }
-    .title .main-text h3 {
-        font-size: 0.75rem;
+    .content .left h1 {
+        font-size: 24px;
     }
-    .title .main-text h6 {
-        font-size: 0.625rem;
+    .content .right h2 {
+        font-size: 16px;
+    }
+    .content .right li p:nth-child(2) {
+        font-size: small;
     }
 }
