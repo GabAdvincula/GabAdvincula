@@ -395,6 +395,11 @@ nav ul li.dl:hover a {
         transform: translate(-50%, -50%);
         width: 90%;
         padding: 10px;
+        top: 20%; /* Adjusting to better fit on smaller screens */
+    }
+    #slide .item .image {
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
@@ -410,5 +415,8 @@ nav ul li.dl:hover a {
     }
     .content .right li p:nth-child(2) {
         font-size: small;
+    }
+    .content .left, .content .right {
+        top: 30%; /* Further adjusting to better fit on smaller screens */
     }
 }
