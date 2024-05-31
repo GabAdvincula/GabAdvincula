@@ -15,13 +15,13 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.9); /* Darker background */
-    z-index: -1; /* Ensure it is behind the content */
+    z-index: -1; /* Ensures it is behind the content */
 }
 
 .agent {
     position: relative;
     z-index: 1;
-    color: white; /* Ensure text color contrasts with overlay */
+    color: white; /* Ensures text color contrasts with overlay */
     
 }
 
@@ -39,7 +39,7 @@
     animation: fadeIn 1s ease-in-out 1s both; 
     background: rgba(0, 0, 0, 0.7); /* Darker background for the entire nav bar */
     border: 2px solid #380957;
-    padding: 9px; /* Adjust as needed */
+    padding: 9px;
     border-radius: 20px; /* Rounded corners for nav bar */
 }
 .agent header .logo h2 a {
@@ -67,7 +67,7 @@ nav ul {
     animation: fadeIn 1s ease-in-out 1s both; 
     background: rgba(0, 0, 0, 0.7); /* Darker background for the entire nav bar */
     border: 2px solid #380957;
-    padding: 15px; /* Adjust as needed */
+    padding: 15px; 
     border-radius: 20px; /* Rounded corners for nav bar */
 }
 
@@ -126,7 +126,7 @@ nav ul li.dl:hover a {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure the video is behind the content */
+    z-index: -1; /* Ensures the video is behind the content */
     overflow: hidden;
     animation: fadeIn 1s ease-in-out 0.5s both;
 }
@@ -136,7 +136,7 @@ nav ul li.dl:hover a {
     height: 100%;
     position: absolute;
     inset: 0 0 0 0;
-    overflow: hidden; /* Ensure the pseudo-element does not overflow */
+    overflow: hidden; /* Ensures the pseudo-element does not overflow */
     
 }
 
@@ -148,14 +148,14 @@ nav ul li.dl:hover a {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2); /* Dark overlay */
-    z-index: 1; /* Place the overlay above the image */
+    z-index: 1; 
 }
 
 .carousel .list .item img {
-    width: 80%; /* Adjust the width as needed */
-    height: auto; /* Keep the aspect ratio */
-    object-fit: cover; /* Resize the image to cover the entire container */
-    border-radius: 20px; /* Add rounded corners to the image */
+    width: 80%; 
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: cover; /* Resizes the image to cover the entire container */
+    border-radius: 20px; /* Adds rounded corners to the image */
 
     animation: fadeIn 1s ease-in-out 0.5s both;
 }
@@ -171,7 +171,7 @@ nav ul li.dl:hover a {
     box-sizing: border-box;
     color: #fff;
     text-shadow: 0 5px 10px #0004;
-    z-index: 2; /* Ensure the text content is above the overlay */
+    z-index: 2; /* Ensures the text content is above the overlay */
 }
 
 .carousel .list .item .author {
